@@ -16,7 +16,7 @@ The below shown results are generated for this [YouTube video](https://www.youtu
 
 <p align="center">
   <img src="samples/1.gif" alt="Face Tracking Results" width="720"/>
-  <em>Tracked face shown in red, merged clips within 2 clips of no tracking</em>
+  <em>Tracked face shown in red, merged clips within 2 clips of no tracking</em><br/>
 </p>
 
 ### Setup and Instructions
