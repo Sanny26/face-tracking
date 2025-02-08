@@ -74,3 +74,4 @@ pip-delete-this-directory.txt
 
 ## Folder-specific
 tmp_folder/
+data/*.mp4

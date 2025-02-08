@@ -1,9 +1,5 @@
-conda create --name facenet_env python=3.10
-conda activate facenet_env
-pip install facenet-pytorch
-
-
 ## Simple Face Tracking olution 
+
 - A lightweight face detection pipeline followed by embedding comparison to track faces across a video.
 - Uses FaceNet for face detection.
 - Employs Inception ResNet for comparing detected faces with template images.
@@ -12,19 +8,20 @@ pip install facenet-pytorch
 In the below results, 
 Consecutive clips are merged if tracking is lost for 2 frames or fewer.
 
+The below shown results are generated for this [YouTube video](https://www.youtube.com/watch?v=cmkZeTX5fq0).
 <p align="center">
-  <img src="samples/3.gif" alt="Face Tracking Results" width="512" height="512" />
+  <img src="samples/3.gif" alt="Face Tracking Results" width="720"/><br/>
   <em>Tracked face shown in red</em>
 </p>
 
 <p align="center">
-  <img src="samples/1.gif" alt="Face Tracking Results" width="512" height="512" />
+  <img src="samples/1.gif" alt="Face Tracking Results" width="720"/>
   <em>Tracked face shown in red, merged clips within 2 clips of no tracking</em>
 </p>
 
-## Setup and Instructions
+### Setup and Instructions
 
-### Dependencies and Env setup
+#### Dependencies and Env setup
 Follow the below to set up the env for the repo.
 ```bash
 conda create --name facenet_env python=3.10
@@ -33,13 +30,13 @@ conda activate facenet_env
 pip install facenet-pytorch opencv-python
 ```
 
-### Run the script
+#### Run the script
 
 To run the script, please use the following:
 
 ```bash 
-python main.py --video downloaded_video.mp4 \
---template template3.jpg \
+python main.py --video data/downloaded_video.mp4 \
+--template data/template3.jpg \
 --output results \
 --detect-thresh 0.95 \
 --sim-thresh 0.5 \
@@ -60,13 +57,15 @@ Use with ```--merge-clips <n_frame>``` to merge consecutive clips even if tracki
 - Not ideal for detecting upside-down or highly rotated faces due to limitations in the face detector's orientation tolerance.
 
 ## Potential Improvements
-**Multi-scale reference embeddings**: Enhance tracking by creating multiple embeddings from the template.
-**Speed optimization**: Skip frames and reuse previously detected face boxes with margin (optical flow).
-**Motion Blur**: Better handling of motion blur & dynamic movement (e.g., dancing).
-**Scalability:** Process large videos efficiently by loading them in chunks.
-**Adaptive tracking:** Build an embedding tree as the video progresses to handle extreme face poses and varying lighting conditions.
-**Improve racial bias** Evaluate the model for any racial bias and finetune the face detection models accordingly
+- **Multi-scale reference embeddings**: Enhance tracking by creating multiple embeddings from the template.
+- **Speed optimization**: Skip frames and reuse previously detected face boxes with margin (optical flow).
+- **Motion Blur**: Better handling of motion blur & dynamic movement (e.g., dancing).
+- **Scalability:** Process large videos efficiently by loading them in chunks.
+- **Adaptive tracking:** Build an embedding tree as the video progresses to handle extreme face poses and varying lighting conditions.
+- **Improve racial bias** Evaluate the model for any racial bias and finetune the face detection models accordingly
 
 ## Sources
 
 - [FaceNet-PyTorch](https://github.com/timesler/facenet-pytorch)
+- Data Sources and Copyright: Google & YouTube
+
