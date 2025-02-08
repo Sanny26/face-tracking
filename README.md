@@ -1,4 +1,4 @@
-## Simple Face Tracking olution 
+## Simple Face Tracking
 
 - A lightweight face detection pipeline followed by embedding comparison to track faces across a video.
 - Uses FaceNet for face detection.
