@@ -5,18 +5,17 @@
 - Employs Inception ResNet for comparing detected faces with template images.
 
 ### Sample Results
-In the below results, 
-Consecutive clips are merged if tracking is lost for 2 frames or fewer.
-
 The below shown results are generated for this [YouTube video](https://www.youtube.com/watch?v=cmkZeTX5fq0).
+
 <p align="center">
   <img src="samples/3.gif" alt="Face Tracking Results" width="720"/><br/>
   <em>Tracked face shown in red</em>
 </p>
 
+In the below results, consecutive clips are merged if tracking is lost for 2 frames or fewer.
 <p align="center">
-  <img src="samples/1.gif" alt="Face Tracking Results" width="720"/>
-  <em>Tracked face shown in red, merged clips within 2 clips of no tracking</em><br/>
+  <img src="samples/1.gif" alt="Face Tracking Results" width="720"/><br/>
+  <em>Tracked face shown in red, merged clips within 2 clips of no tracking</em>
 </p>
 
 ### Setup and Instructions
